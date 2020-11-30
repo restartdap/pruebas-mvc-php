@@ -1,13 +1,13 @@
 <?php
 
-class Main {
+class Main extends Controller {
 
-    function __construct() {
-        echo "<p>Hola desde el controlador Main</p>";
+    function __construct() {   
+        parent::__construct();
+        $this->view->render("main/index");
     }
 
     function saludo() {
         echo "<p>Ejecutaste el metodo Saludo</p>";
-        echo "<p>Hola Usuario</p>";
     }
 }

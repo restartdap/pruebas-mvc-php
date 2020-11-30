@@ -1,3 +1,7 @@
 <?php
-    echo "Estás en index.html";
+    require_once "libs/app.php";
+
+    $app = new App();
+
+    // echo "Estás en index.html";
 ?>

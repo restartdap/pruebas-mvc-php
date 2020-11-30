@@ -4,22 +4,19 @@ require_once "controllers/errores.php";
 
 class App{
     function __construct() {
-        echo "<p>Nueva App</p>";
 
-        $url = $_GET["url"];
-        echo "<p>{$url}</p>";
+        $url = $_GET["url"]; // ['controlador/metodo']
 
         $url = rtrim($url, '/');
-        $url = explode('/', $url);
-        print_r($url);
+        $url = explode('/', $url); // {0: 'controlador', 1: 'metodo'}
 
         $controller_name = $url[0];
 
-        $archivo_controller = "controllers/{$controller_name}.php";
+        $controller_file = "controllers/{$controller_name}.php";
 
-        if(file_exists($archivo_controller)) {
+        if(file_exists($controller_file)) {
 
-            require_once $archivo_controller;
+            require_once $controller_file;
             $controller = new $controller_name();
 
             if(isset($url[1])) {

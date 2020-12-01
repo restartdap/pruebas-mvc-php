@@ -50,11 +50,11 @@ body {
     text-decoration: none;
     color: white;
     padding: 10px 30px;
-    transition: 500ms;
 }
 
 .header ul li a:hover {
     background-color: rgb(31, 31, 31);
+    transition: 500ms;
 }
 
 .footer {

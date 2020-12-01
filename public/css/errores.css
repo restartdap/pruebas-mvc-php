@@ -1,0 +1,43 @@
+.error-container {
+    margin-top: 100px;
+    background-color: pink;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+}
+
+.img-error {
+    /* background-color: violet; */
+    width: 50%;
+    height: 100%;
+    background-image: url("https://i.pinimg.com/originals/10/79/2c/10792c623fab3e96b1f7b0a332aed2fd.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.error-info {
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    color: red;
+    width: 100%;
+    font-size: 34px;
+    font-weight: bold;
+    padding: 5px 30px;
+}
+
+.error-message {
+    width: 100%;
+    font-size: 30px;
+    font-weight: normal;
+    padding: 5px 30px;
+}

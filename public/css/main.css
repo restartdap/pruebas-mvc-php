@@ -1,0 +1,11 @@
+.title {
+    box-shadow: inset 0px 0px 10px rgb(123, 123, 123);
+    background-color: gray;
+    color: white;
+    font-size: 36px;
+    font-weight: bold;
+    padding: 10px 30px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}

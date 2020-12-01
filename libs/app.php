@@ -5,13 +5,20 @@ require_once "controllers/errores.php";
 class App{
     function __construct() {
 
-        $url = $_GET["url"]; // ['controlador/metodo']
+        $url = isset($_GET["url"]) ? $_GET["url"] : null; // ['controlador/metodo']
 
         $url = rtrim($url, '/');
         $url = explode('/', $url); // {0: 'controlador', 1: 'metodo'}
 
         $controller_name = $url[0];
 
+        if(empty($controller_name)) {
+            $controller_file = "controllers/main.php";
+            require_once $controller_file;
+            $controller = new Main();
+            return false;    
+        }
+        
         $controller_file = "controllers/{$controller_name}.php";
 
         if(file_exists($controller_file)) {

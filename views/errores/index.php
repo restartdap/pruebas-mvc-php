@@ -4,9 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Error | Aplicacion MVC</title>
+    <link rel="stylesheet" href="public/css/default.css">
+    <link rel="stylesheet" href="public/css/errores.css">
 </head>
 <body>
-    <h1>Errores View</h1>
-    <h2><?php echo $this->mensaje; ?></h2>
+    <?php require "views/header.php"; ?>
+
+    <main class="main">
+        <div class="error-container">
+            <div class="img-error">
+            </div>
+            <div class="error-info">
+                <p class="title">¡Ha ocurrido un error!</p>
+                <h2 class="error-message"><?php echo $this->mensaje; ?></h2>
+            </div>
+        </div>
+    </main>
+
+    <?php require "views/footer.php"; ?>
 </body>
 </html>

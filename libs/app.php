@@ -16,6 +16,7 @@ class App{
             $controller_file = "controllers/main.php";
             require_once $controller_file;
             $controller = new Main();
+            $controller->loadModel($url[0]);
             return false;    
         }
         
@@ -25,6 +26,7 @@ class App{
 
             require_once $controller_file;
             $controller = new $controller_name();
+            $controller->loadModel($url[0]);
 
             if(isset($url[1])) {
 

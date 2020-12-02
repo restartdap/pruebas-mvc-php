@@ -11,6 +11,7 @@
     <?php require "views/header.php"; ?>
 
     <main class="main">
+        <div class="container">
         <div class="error-container">
             <div class="img-error">
             </div>
@@ -18,6 +19,7 @@
                 <p class="title">¡Ha ocurrido un error!</p>
                 <h2 class="error-message"><?php echo $this->mensaje; ?></h2>
             </div>
+        </div>
         </div>
     </main>
 

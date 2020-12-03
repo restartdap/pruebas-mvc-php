@@ -18,9 +18,9 @@
 
         <p>
             <?php
-            foreach ($_POST as $valor_campo) {
-                echo "{$valor_campo}<br>";
-            }
+                if (isset($this->mensaje)) {
+                    echo $this->mensaje;
+                };
             ?>
         </p>
 
@@ -32,17 +32,17 @@
                     </div>
                     <div class="form-div">
                         <label for="matricula">Matricula: </label>
-                        <input type="text" name="matricula">
+                        <input type="text" name="matricula" required>
                     </div>
 
                     <div class="form-div">
                         <label for="nombre">Nombre: </label>
-                        <input type="text" name="nombre">
+                        <input type="text" name="nombre" required>
                     </div>
 
                     <div class="form-div">
                         <label for="apellido">Apellido: </label>
-                        <input type="text" name="apellido">
+                        <input type="text" name="apellido" required>
                     </div>
 
                     <div class="form-div">

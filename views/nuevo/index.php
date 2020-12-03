@@ -45,23 +45,35 @@
 
         <div class="form-container">
             <form action="<?php echo constant("URL"); ?>/nuevo/registrarAlumno" method="POST" class="formulario-alumnos">
-                <fieldset>
+                <fieldset style="background-color: black;">
                     <div class="form-div">
                         <legend class="form-title">Formulario</legend>
                     </div>
                     <div class="form-div">
-                        <label for="matricula">Matricula: </label>
-                        <input type="text" name="matricula" required>
+                        <div class="form-div-label">
+                            <label for="matricula">Matricula: </label>
+                        </div>
+                        <div class="form-div-input">
+                            <input type="text" name="matricula" required>
+                        </div>
                     </div>
 
                     <div class="form-div">
-                        <label for="nombre">Nombre: </label>
-                        <input type="text" name="nombre" required>
+                        <div class="form-div-label">
+                            <label for="nombre">Nombre: </label>
+                        </div>
+                        <div class="form-div-input">
+                            <input type="text" name="nombre" required>
+                        </div>
                     </div>
 
                     <div class="form-div">
-                        <label for="apellido">Apellido: </label>
-                        <input type="text" name="apellido" required>
+                        <div class="form-div-label">
+                            <label for="apellido">Apellido: </label>
+                        </div>
+                        <div class="form-div-input">
+                            <input type="text" name="apellido" required>
+                        </div>
                     </div>
 
                     <div class="form-div">

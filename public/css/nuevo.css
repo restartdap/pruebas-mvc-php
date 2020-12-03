@@ -17,15 +17,15 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    background-color: blueviolet;
+    /* background-color: blueviolet; */
+    padding: 10px 0px;
 }
 
 .formulario-alumnos {
-    background-color: violet;
-    width: 50%;
-    padding: 10px;
+    width: 40%;
+    padding: 0px 10px;
     border-radius: 3px;
-    background-color: rgb(50, 50, 50);
+    background-color: black;
     color: white;
 }
 
@@ -35,26 +35,30 @@
 }
 
 .form-div {
-    padding: 10px 20px;
+    background-color: rgb(50, 50, 50);
+    padding: 10px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     padding: 10px 0px;
+    border-width: 3px 0px;
+    border-color: black;
+    border-style: solid;
+}
+
+.form-div:first-child, .form-div:last-child {
+    background-color: black;
 }
 
 .formulario-alumnos label {
-    padding: 5px 10px;
     font-weight: bold;
     text-align: end;
-    width: 30%;
 }
 
 .formulario-alumnos input[type=text] {
-    width: 50%;
-    font-size: 18px;
-    padding: 10px 10px;
-    margin: 0px 125px 0px 0px;
+    padding: 10px;
+    width: 60%;
 }
 
 .formulario-alumnos input:focus {
@@ -120,4 +124,50 @@
 
 .bgcolor-3 {
     background-color: rgb(212, 208, 0);
+}
+
+.form-div-label {
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-div-input {
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 575px) {
+    .formulario-alumnos {
+        width: 100%;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+    .formulario-alumnos {
+        width: 70%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .formulario-alumnos {
+        width: 60%;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .formulario-alumnos {
+        width: 50%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .formulario-alumnos {
+        width: 40%;
+    }
 }

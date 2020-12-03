@@ -12,17 +12,36 @@
 <body>
     <?php require "views/header.php"; ?>
 
-    <main class="main">
+    <main class="main" id="main">
 
         <p class="title">Nuevo</p>
 
-        <p>
+        <?php
+        if (isset($this->mensaje)) {
+            if ($this->mensaje == 1) {
+        ?>
+                <div class="message-container bgcolor-1" id="divMensaje">
+                    <span>Nuevo alumno registrado</span>
+                    <button id="eliminarDivMensaje">&#10005;</button>
+                </div>
             <?php
-                if (isset($this->mensaje)) {
-                    echo $this->mensaje;
-                };
+            } else if ($this->mensaje == 2) {
             ?>
-        </p>
+                <div class="message-container bgcolor-2" id="divMensaje">
+                    <span>No se pudo registrar al nuevo alumno</span>
+                    <button id="eliminarDivMensaje">&#10005;</button>
+                </div>
+            <?php
+            } else {
+            ?>
+                <div class="message-container bgcolor-3" id="divMensaje">
+                    <span>No se enviaron valores</span>
+                    <button id="eliminarDivMensaje">&#10005;</button>
+                </div>
+        <?php
+            }
+        };
+        ?>
 
         <div class="form-container">
             <form action="<?php echo constant("URL"); ?>/nuevo/registrarAlumno" method="POST" class="formulario-alumnos">
@@ -51,10 +70,19 @@
                 </fieldset>
             </form>
         </div>
-
     </main>
 
     <?php require "views/footer.php"; ?>
+
+    <script defer>
+        const main = document.getElementById("main");
+        const divMensaje = document.getElementById("divMensaje");
+        const eliminarDivMensaje = document.getElementById("eliminarDivMensaje");
+
+        eliminarDivMensaje.addEventListener("click", () => {
+            main.removeChild(divMensaje);
+        });
+    </script>
 </body>
 
 </html>

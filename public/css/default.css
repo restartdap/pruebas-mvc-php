@@ -72,8 +72,9 @@ body {
 }
 
 .main {
+    background-color: white;
     margin-top: 50px;
     width: 95%;
-    min-height: calc(100vh - 80px);
-    background-color: white;
+    min-height: calc(100vh - 50px);
+    padding-bottom: 40px;
 }

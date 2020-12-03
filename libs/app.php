@@ -12,11 +12,13 @@ class App{
 
         $controller_name = $url[0];
 
+        // Cuando no se ingresa controlador
         if(empty($controller_name)) {
             $controller_file = "controllers/main.php";
             require_once $controller_file;
             $controller = new Main();
             $controller->loadModel($url[0]);
+            $controller->render();
             return false;    
         }
         
@@ -27,11 +29,14 @@ class App{
             require_once $controller_file;
             $controller = new $controller_name();
             $controller->loadModel($url[0]);
-
+            
             if(isset($url[1])) {
 
                 $method = $url[1];
                 $controller->{$method}();
+            }
+            else {
+                $controller->render();
             }
         }
         else {

@@ -22,14 +22,14 @@ class Nuevo extends Controller {
             $resultado = $this->model->insert(["matricula" => $matricula, "nombre" => $nombre, "apellido" => $apellido]);
 
             if($resultado) {
-                $mensaje = "Nuevo alumno registrado";
+                $mensaje = 1;
             }
             else {
-                $mensaje = "No se pudo registrar al nuevo alumno";
+                $mensaje = 2;
             }
         }
         else {
-            $mensaje = "No se enviaron valores";
+            $mensaje = 3;
         }
         
         $this->view->mensaje = $mensaje;

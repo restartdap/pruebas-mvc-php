@@ -12,6 +12,10 @@
 
     <main class="main">
         <p class="title">Consulta</p>
+
+        <?php
+            var_dump($this->alumnos);
+        ?>
     </main>
 
     <?php require "views/footer.php"; ?>

@@ -12,4 +12,12 @@ class Consulta extends Controller {
         $this->view->alumnos = $alumnos;
         $this->view->render("consulta/index");
     }
+
+    function verAlumno() {
+
+    }
+
+    function eliminarAlumno() {
+        
+    }
 }

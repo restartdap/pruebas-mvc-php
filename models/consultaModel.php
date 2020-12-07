@@ -21,6 +21,8 @@ class ConsultaModel extends Model {
 
                 array_push($items, $item);
             }
+
+            return $items;
         } 
         catch (PDOException $e) {
             return [];

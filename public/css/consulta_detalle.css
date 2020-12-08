@@ -1,0 +1,173 @@
+.title {
+    box-shadow: inset 0px 0px 10px rgb(123, 123, 123);
+    background-color: gray;
+    color: white;
+    font-size: 36px;
+    font-weight: bold;
+    padding: 10px 30px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.form-container {
+    width: 100%;
+    min-height: calc(100vh - 152px);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    /* background-color: blueviolet; */
+    padding: 10px 0px;
+}
+
+.formulario-alumnos {
+    width: 40%;
+    padding: 0px 10px;
+    border-radius: 3px;
+    background-color: black;
+    color: white;
+}
+
+.form-title {
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.form-div {
+    background-color: rgb(50, 50, 50);
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0px;
+    border-width: 3px 0px;
+    border-color: black;
+    border-style: solid;
+}
+
+.form-div:first-child, .form-div:last-child {
+    background-color: black;
+}
+
+.formulario-alumnos label {
+    font-weight: bold;
+    text-align: end;
+}
+
+.formulario-alumnos input[type=text] {
+    padding: 10px;
+    width: 60%;
+}
+
+.formulario-alumnos input:focus {
+    outline: gray solid 3px;
+    transition: 200ms;
+}
+
+.formulario-alumnos input[type=submit] {
+    padding: 10px 20px;
+    /* border-radius: 5px; */
+    background-color: rgb(239, 239, 239);
+    cursor: pointer;
+}
+
+.formulario-alumnos input[type=submit]:hover {
+    transition: 500ms;
+    background-color:rgb(220, 220, 220);
+
+}
+
+.message-container {
+    width: 100%;
+    padding: 20px 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 1s;
+}
+
+.message-container span {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    margin-right: 30px;
+}
+
+.message-container button {
+    font-weight: bold;
+    background-color: black;
+    color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: none;
+    cursor: pointer;
+}
+
+.message-container button:hover {
+    transition: 300ms;
+    background-color: rgb(31, 31, 31);
+}
+
+.bgcolor-1 {
+    background-color: cadetblue;
+}
+
+.bgcolor-2 {
+    background-color: rgb(168, 0, 0);
+}
+
+.bgcolor-3 {
+    background-color: rgb(212, 208, 0);
+}
+
+.form-div-label {
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-div-input {
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 575px) {
+    .formulario-alumnos {
+        width: 100%;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+    .formulario-alumnos {
+        width: 70%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .formulario-alumnos {
+        width: 60%;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .formulario-alumnos {
+        width: 50%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .formulario-alumnos {
+        width: 40%;
+    }
+}
